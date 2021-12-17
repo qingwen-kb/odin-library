@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+    font-family: "Libre Baskerville", serif;
+}
+
+.main {
+    text-align: center;
+    padding: 5% 7%;
+}
+
+.add-btn {
+    border: none;
+}
+
+.fa-plus-circle {
+    background: #fff;
+    border-style: none;
+    color: rgb(26, 49, 250);
+}
+
+.overlay-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 0vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+    opacity: 0;
+    overflow: hidden;
+    padding: 5% 7%;
+    transition: top 400ms ease-in-out, opacity 400ms ease-in-out,
+        height 0ms ease-in-out 0ms;
+}
+
+.overlay-form .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.activeForm {
+    z-index: 2;
+    opacity: 1;
+    height: 100vh;
+    transition: top 400ms ease-in-out, opacity 400ms ease-in-out,
+        height 0ms ease-in-out 0ms;
+}
+
+form {
+    color: white;
+    margin-top: 10%;
+    padding: 7%;
+    text-align: center;
+}
+
+.main {
+    margin: auto;
+    padding: 1%;
+}
+
+.card {
+    padding: 0;
+    margin: 2% 2%;
+}
+
+.switch {
+    position: relative;
+    margin: 2% 2% 2% auto;
+    width: 60px;
+    height: 34px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ccc;
+    transition: 0.4s;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked+.slider {
+    background-color: #2196f3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196f3;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.card-header {
+    color: #fff;
+    background: rgb(73, 151, 240);
+}
+
+.del-btn {
+    border-style: none;
+    color: #fff;
+    background: rgb(73, 151, 240);
+}
+
+.isRead {
+    background: rgb(7, 255, 181);
+}
